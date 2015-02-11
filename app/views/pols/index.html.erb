@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<div class="head">
-  <head>
-    <h1>Please enter zip code and select issue</h1>
-  </head>
+<div class="title">
+  <h3> Enter zipcode or politican name </h3>
 </div>
+<div class ="search">
 <%= form_tag search_path, method: :get do %>
 <%= text_field_tag 'keyword', nil %>
+<%= submit_tag "Search", :class => 'button' %>
 <% end %>
-
-<%= submit_tag "Search" %>
-
-<% if @pols.present? %>
-    <% @pols.each do |pol| %>
-    Politicians
-    <%= pol.name %>
-    <%= pol.district.name %>
-    <% end %>
-  <% else %>
-    <p> No Zip Located</p>
-<% end %>
-</html>
+</div>

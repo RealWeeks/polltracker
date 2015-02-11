@@ -1,0 +1,40 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+
+body {
+  background: #ccc;
+}
+
+.search {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  font-family: 'Raleway', sans-serif;
+}
+
+.top {
+  height:80px;
+  background:#F0F0F0;
+  border:1px solid #CCC;
+  width:100%;
+  margin:0px auto;
+  text-align: center;
+  font-family: cursive;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.3999996185303px;
+}

@@ -1,8 +1,19 @@
+<div class="container-fluid">
 
-  <h1><%= @pol.name %></h1>
-  <h2><%= @pol.party %></h2>
-  <% @pol.votes.each do |vote| %>
-  <%= vote.bill.name %>
-  <%= vote.how_vote %>
+  <div class="row custom-class">
+    <div class="col-md-6">
+      <h1><%= @pol.name %></h1>
+      <h2><%= @pol.party %></h2>
+    </div>
+    <div class="col-md-12">
+      <% @pol.votes.each do |vote| %>
+        <table>
+          <tr><%= vote.bill.name %></tr>
+          <tr>  Voted: <%= vote.how_vote %></tr>
+          <tr>  Current Status:  <%= vote.bill.status %></tr>
+          <br>
+        </table>
+      <% end %>
+    </div>
+  </div>
 
-  <% end %>

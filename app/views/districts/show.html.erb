@@ -1,9 +1,12 @@
-<%= @district.name %>
-<%= @district.zipcode %>
-<% @district.pols.each do |pol| %>
-<%= pol.name %>
-<%= pol.party %>
-<% end %>
-
+<div class="search">
+  <%= @district.name %>:
+  <%= @district.zipcode %>
+  <br>
+  <% @district.pols.each do |pol| %>
+  <%= link_to pol.name, pol_path(pol.id)%>
+  <br>
+  <%= pol.party %>
+  <% end %>
+</div>
 
 

@@ -1,0 +1,12 @@
+<div class="search">
+  Bill Name: <%= @bill.name %>
+  <br>
+  Bill Number: <%= @bill.number %>
+  <br>
+  Bill Status: <%= @bill.status %>
+  <br>
+  <% @bill.votes.each do |vote| %>
+    <%= vote.pol.name %> voted
+    <%= vote.how_vote %> on this bill
+  <% end %>
+</div>
