@@ -12,4 +12,6 @@
 
 class Pol < ActiveRecord::Base
   belongs_to :district
+  has_many :votes
+  has_many :bills, through: :votes
 end
