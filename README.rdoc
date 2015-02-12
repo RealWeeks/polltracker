@@ -1,27 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the PoliTracker
 
-Things you may want to cover:
+The purpose of this app is to track the votes of MA politicans.
 
-* Ruby version
+This app is still in development and in the futur more features will be added.
 
-* System dependencies
+At this time this app works with certain zip codes, issues and politicans.
 
-* Configuration
+Politican names are case sensitive, and zip codes require an exact match, the search issue feature has been recently intergrated and I am still working on some of the features.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please give this app a run and feel free to message me with any suggestions.
 
 
 Please feel free to use a different markup language if you do not plan to run
