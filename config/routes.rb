@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pols#index'
 
   resources :pols
   resources :bills
