@@ -24,10 +24,10 @@ pol_eight = Pol.create!(party: "Democrat", name: "Stephen Lynch", district: dist
 pol_nine = Pol.create!(party: "Democrat", name: "William Keating", district: district_nine)
 
 
-1.upto(10) do |i|
-  bill = Bill.create!(name:"Bill#{i}", number: "#{i}", status: "status #{i}")
-  Vote.create!(how_vote: "Yea", pol: pol_one, bill: bill)
-end
+# 1.upto(10) do |i|
+#   bill = Bill.create!(name:"Bill#{i}", number: "#{i}", status: "status #{i}")
+#   Vote.create!(how_vote: "Yea", pol: pol_one, bill: bill)
+# end
 
 bill_one = Bill.create(name:"Repeal affordable care act (Healthcare)", number: "HR 45", status: "Failed to pass")
 
@@ -41,13 +41,37 @@ Vote.create!(how_vote: "Nay", pol: pol_seven, bill: bill_one)
 Vote.create!(how_vote: "Nay", pol: pol_eight, bill: bill_one)
 Vote.create!(how_vote: "Nay", pol: pol_nine, bill: bill_one)
 
+bill_two = Bill.create(name:"Preventing over reach on immigration (Immigration)", number: "HR 5759", status: "Failed to pass")
+
+Vote.create!(how_vote: "Nay", pol: pol_one, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_two, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_three, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_four, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_five, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_six, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_seven, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_eight, bill: bill_two)
+Vote.create!(how_vote: "Nay", pol: pol_nine, bill: bill_two)
+
+bill_three = Bill.create(name:"Ammends requirements of EPA employees (Environment)", number: "HR 1422", status: "Failed to pass")
+
+Vote.create!(how_vote: "Nay", pol: pol_one, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_two, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_three, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_four, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_five, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_six, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_seven, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_eight, bill: bill_three)
+Vote.create!(how_vote: "Nay", pol: pol_nine, bill: bill_three)
 
 
-require 'csv'
 
-CSV.foreach(Rails.root.join('db', 'seeds', 'district.csv'), :headers => true, :col_sep => ',') do |row|
-  District.create(:zipcode => row['zipcode'], :name => row['name'])
-end
+# require 'csv'
+
+# CSV.foreach(Rails.root.join('db', 'seeds', 'district.csv'), :headers => true, :col_sep => ',') do |row|
+#   District.create(:zipcode => row['zipcode'], :name => row['name'])
+# end
 
 ## parse the csv file
 ## for each record in the csv file:

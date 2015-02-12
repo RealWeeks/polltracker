@@ -9,8 +9,11 @@
       <% @pol.votes.each do |vote| %>
         <table>
           <tr><%= vote.bill.name %></tr>
+          <br>
           <tr>  Voted: <%= vote.how_vote %></tr>
+          <br>
           <tr>  Current Status:  <%= vote.bill.status %></tr>
+          <br>
           <br>
         </table>
       <% end %>
