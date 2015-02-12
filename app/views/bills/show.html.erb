@@ -5,8 +5,12 @@
   <br>
   Bill Status: <%= @bill.status %>
   <br>
+  <br>
   <% @bill.votes.each do |vote| %>
-    <%= vote.pol.name %> voted
-    <%= vote.how_vote %> on this bill
+    <li>
+      <%= vote.pol.name %> voted
+      <%= vote.how_vote %> on this bill
+    </li>
+    <br>
   <% end %>
 </div>
